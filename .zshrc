@@ -14,7 +14,5 @@ autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Set colors for LS_COLORS.
 eval `dircolors ~/.dircolors`
