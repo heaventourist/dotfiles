@@ -24,7 +24,14 @@ git clone https://github.com/powerline/fonts.git $FONT_DIR --depth=1
 cd $FONT_DIR
 ./install.sh
 
-echo "Setting up the Spaceship theme."
-ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+echo "Install zsh-syntax-highlighting"
+ZSH_SYNTAX_HIGHLIGHTING_DIR="$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_SYNTAX_HIGHLIGHTING_DIR
+
+echo "Install zsh-completions"
+ZSH_COMPLETIONS_DIR="$HOME/.oh-my-zsh/custom/plugins/zsh-completions"
+git clone https://github.com/zsh-users/zsh-completions $ZSH_COMPLETIONS_DIR
+
+echo "Install zsh-autosuggestions"
+ZSH_AUTOSUGGESTIONS_DIR="$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_AUTOSUGGESTIONS_DIR
